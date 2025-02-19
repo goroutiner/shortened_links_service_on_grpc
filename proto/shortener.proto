@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package shortened_links_service_on_grpc;
+
+option go_package = "proto/";
+
+service ShortenerService {
+    rpc GetShortLink (GetShortLinkRequest) returns (GetShortLinkResponse);
+    rpc GetOriginalLink (GetOriginalLinkRequest) returns (GetOriginalLinkResponse);
+}
+
+message GetShortLinkRequest {
+    string original_link = 1;
+}
+
+message GetShortLinkResponse {
+    string short_link = 1;
+}
+
+message GetOriginalLinkRequest {
+    string short_link = 1;
+}
+
+message GetOriginalLinkResponse {
+    string original_link = 1;
+}
