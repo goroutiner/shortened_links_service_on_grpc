@@ -93,3 +93,15 @@ docker build -t psql_test:test internal/services/. && docker run -p 5432:5432 -d
 ```sh
 go test -v ./internal/storage/database/... 
 ```
+
+---
+
+## 🛠️ Технические ресурсы
+
+- **Библиотеки для взаимодействия с gRPC:** [google.golang.org/grpc](https://github.com/grpc/grpc-go) и [google.golang.org/protobuf](https://github.com/protocolbuffers/protobuf-go)
+
+- **Библиотеки для взаимодействия с БД:** [jmoiron/sqlx](https://github.com/jmoiron/sqlx) и [ackc/pgx](https://github.com/jackc/pgx)
+
+- **Библиотека для написания тестов:** [stretchr/testify](https://github.com/stretchr/testify)
+
+- **Библиотека для ограничения RPS пользователей сервиса:** [golang.org/x/time/rate](https://pkg.go.dev/golang.org/x/time@v0.10.0/rate#pkg-overview)
